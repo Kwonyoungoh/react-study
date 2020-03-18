@@ -1,26 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
+import Hello from './hello';
+import Wrapper from './Wrapper';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper>
+      <Hello name="React" color="red" isTrue={true} isSpecial />
+      {/* isSpecial과 같은 불리언 값이 true인경우에는 안써주면 true임 */}
+      <Hello color="aqua" isSpecial={false} />
+    </Wrapper>
   );
 }
-
+//여기있는 dom의 property를 함수에서 props로 받아올수있다. 비구조할당하면 속성마다 가져오는 것이 가능 ex){name,color}
 export default App;
