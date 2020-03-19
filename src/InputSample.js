@@ -6,6 +6,7 @@ function InputSample() {
     nickname: '',
   });
   const nameInput = useRef();
+  // 특정 Dom을 선택할때는 useRef를 사용한다.
 
   const { name, nickname } = inputs;
   // name 과 nickname 의 비구조할당으로 추출
