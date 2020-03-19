@@ -9,24 +9,7 @@ function User({ user }) {
   );
 }
 
-function UserList() {
-  const users = [
-    {
-      id: 1,
-      username: 'velopert',
-      email: '1231@naver.com',
-    },
-    {
-      id: 2,
-      username: 'youngOh',
-      email: 'dududh@naver.com',
-    },
-    {
-      id: 3,
-      username: 'mrsLee',
-      email: 'mrslee@naver.com',
-    },
-  ];
+function UserList({ users }) {
   return (
     <div>
       {users.map(user => (
